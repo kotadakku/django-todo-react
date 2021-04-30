@@ -64,8 +64,11 @@ export default function CustomModal(props) {
       <ModalFooter>
         <Button
           color="success"
-          onClick={() => props.onSave(activeItem)}
-        >
+          onClick={() => {
+            props.onSave(activeItem);
+            props.toggle()
+          }
+        }>
           Save
         </Button>
       </ModalFooter>
